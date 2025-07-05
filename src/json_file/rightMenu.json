@@ -1,0 +1,48 @@
+{
+  "Alliance": {
+    "location_btn": {
+      "x": 1545,
+      "y": 1020
+    },
+    "Alliance_list": {
+      "technology": {
+        "location_btn": {
+          "x": 1000,
+          "y": 750
+        },
+        "donate_btn": {
+          "x": 1300,
+          "y": 750
+        }
+      },
+      "territory": {
+        "location_btn": {
+          "x": 1150,
+          "y": 600
+        },
+        "claim": {
+          "x": 1340,
+          "y": 300
+        },
+        "close_teritory": {
+          "x": 1465,
+          "y": 220
+        }
+      },
+      "gift": {
+        "location": {
+          "x":1400,
+          "y": 600
+        },
+        "claim_all_first_tab": {
+          "x": 1450,
+          "y": 370
+        },
+         "close_gift": {
+          "x": 1465,
+          "y": 220
+        }
+      }
+    }
+  }
+}

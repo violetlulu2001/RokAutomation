@@ -1,0 +1,32 @@
+{
+   "Profile":{
+      "x":50,
+      "y":50
+   },
+   "Setting":{
+      "x":460,
+      "y":926
+   },
+   "Account":{
+      "x":265,
+      "y":650
+   },
+   "Account_changer":{
+      "location_btn":{
+         "x":640,
+         "y":300
+      },
+      "switch_account":{
+         "x":950,
+         "y":700
+      },
+      "switch_btn_account":{
+         "x":950,
+         "y":600
+      },
+      "yes_btn_change_acc":{
+         "x":1145,
+         "y":675
+      }
+   }
+}
