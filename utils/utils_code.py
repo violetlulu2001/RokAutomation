@@ -60,14 +60,14 @@ def donate_alliance_tech():
                     rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=2)
 
 def find_stone():
-        stone_imgs = "F:\\RokAutomation\\src\\image\\stone"
-        for i in range(1, len(os.listdir(stone_imgs))+1):
-            try:
-                button7location = pyautogui.locateOnScreen(f'F:\\RokAutomation\\src\\image\\stone\\stone{i}.png', confidence=0.9)
-                button7location = pyautogui.center(button7location)
-                print(button7location.x, button7location.y)
-                pyautogui.click(button7location.x, button7location.y + 30, duration=2)
-            except Exception as e:
-                print(e)
+    stone_imgs = "F:\\RokAutomation\\src\\image\\stone"
+    for i in range(1, len(os.listdir(stone_imgs))+1):
+        try:
+            button7location = pyautogui.locateOnScreen(f'F:\\RokAutomation\\src\\image\\stone\\stone{i}.png', confidence=0.9)
+            button7location = pyautogui.center(button7location)
+            print(button7location.x, button7location.y)
+            pyautogui.click(button7location.x, button7location.y + 30, duration=2)
+        except Exception as e:
+            print(e)
 
 
