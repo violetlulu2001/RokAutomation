@@ -9,7 +9,7 @@ def join_rally() -> None:
     pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=2)
     time.sleep(5)
     try:
-        button7location = pyautogui.locateOnScreen('F:\\RokAutomation\\src\\image\\profile_main.png', confidence=0.9)
+        button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\profile_main.png', confidence=0.9)
         button7location = pyautogui.center(button7location)
         pyautogui.click(button7location.x, button7location.y, duration=2)
     except Exception as e:
@@ -69,7 +69,7 @@ def donate_alliance_tech() -> None:
                     rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'], duration=4)
     time.sleep(10)
     try:
-        button7location = pyautogui.locateOnScreen('F:\\RokAutomation\\src\\image\\star_technology.png', confidence=0.9)
+        button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\star_technology.png', confidence=0.9)
         button7location = pyautogui.center(button7location)
         print(button7location.x, button7location.y)
         pyautogui.click(button7location.x, button7location.y + 30, duration=2)
@@ -89,7 +89,7 @@ def find_stone() -> None:
     stone_imgs = "F:\\RokAutomation\\src\\image\\stone"
     for i in range(1, len(os.listdir(stone_imgs))+1):
         try:
-            button7location = pyautogui.locateOnScreen(f'F:\\RokAutomation\\src\\image\\stone\\stone{i}.png', confidence=0.9)
+            button7location = pyautogui.locateOnScreen(f'D:\\RokAutomation\\src\\image\\stone\\stone{i}.png', confidence=0.9)
             button7location = pyautogui.center(button7location)
             print(button7location.x, button7location.y)
             pyautogui.click(button7location.x, button7location.y + 30, duration=2)
