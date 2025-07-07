@@ -18,11 +18,8 @@ def join_rally() -> None:
     pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
     pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
 
-
-
-
-
 def start_blacksmith(mat:str) -> None:
+    pyautogui.click(city['blacksmith']['get_mats']["x"], city['blacksmith']['get_mats']["y"], duration=1)
     pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
     pyautogui.click(city['blacksmith']['craft_mats']['location']["x"], city['blacksmith']['craft_mats']['location']["y"], duration=1)
     pyautogui.click(city['blacksmith']['craft_mats'][mat]["x"], city['blacksmith']['craft_mats'][mat]["y"], clicks=5, duration=4,
@@ -38,10 +35,10 @@ def change_city(i:int) -> None:
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    time.sleep(15)
+    time.sleep(20)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    time.sleep(15)
+    time.sleep(20)
 
 def get_alliance_rss() -> None:
     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
