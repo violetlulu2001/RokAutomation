@@ -40,6 +40,15 @@ def change_city(i:int) -> None:
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
     time.sleep(20)
 
+def change_acct() -> None:
+    pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
+    pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
+    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
+    pyautogui.click(setting['Setting']["Account_changer"]['x'], setting['Setting']['Account_changer']['y'], duration=1)
+    pyautogui.click(setting['Setting']["switch_account"]['x'], setting['Setting']['switch_account']['y'], duration=1)
+    pyautogui.click(setting['Setting']["switch_btn_account"]['x'], setting['Setting']['switch_btn_account']['y'], duration=1)
+    pyautogui.click(setting['Setting']["yes_btn_change_acc"]['x'], setting['Setting']['yes_btn_change_acc']['y'], duration=1)
+
 def get_alliance_rss() -> None:
     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['x'],
