@@ -1,0 +1,1 @@
+python D:\RokAutomation\donate_techs_rss.py
