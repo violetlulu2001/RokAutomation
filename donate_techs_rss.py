@@ -2,7 +2,7 @@ import os.path
 
 
 from reader_json import accounts
-from utils.mouse_code import (change_city, get_alliance_rss)
+from utils.mouse_code import (change_city, donate_alliance_tech)
 from utils.os_zone import os_file
 from utils.constants import name_donate, delimtator
 from utils.util_function import get_datetime_format
@@ -19,4 +19,4 @@ if __name__ == '__main__':
             change_city(i, writer)
             writer.write(delimtator)
             writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Donate Alliance Techs Lulu{i}\n')
-            get_alliance_rss()
+            donate_alliance_tech(writer)
