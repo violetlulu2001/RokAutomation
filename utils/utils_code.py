@@ -19,12 +19,12 @@ def join_rally() -> None:
     pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
 
 def start_blacksmith(mat:str) -> None:
-    pyautogui.click(city['blacksmith']['get_mats']["x"], city['blacksmith']['get_mats']["y"], duration=1)
-    pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
-    pyautogui.click(city['blacksmith']['craft_mats']['location']["x"], city['blacksmith']['craft_mats']['location']["y"], duration=1)
+    pyautogui.click(city['blacksmith']['get_mats']["x"], city['blacksmith']['get_mats']["y"], duration=2)
+    pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=2)
+    pyautogui.click(city['blacksmith']['craft_mats']['location']["x"], city['blacksmith']['craft_mats']['location']["y"], duration=2)
     pyautogui.click(city['blacksmith']['craft_mats'][mat]["x"], city['blacksmith']['craft_mats'][mat]["y"], clicks=5, duration=4,
                     interval=1)
-    pyautogui.click(city['blacksmith']['close_btn']["x"], city['blacksmith']['close_btn']["y"], duration=1)
+    pyautogui.click(city['blacksmith']['close_btn']["x"], city['blacksmith']['close_btn']["y"], duration=2)
 
 
 def change_city(i:int) -> None:
