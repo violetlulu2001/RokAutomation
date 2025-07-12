@@ -1,7 +1,11 @@
 import os
 import time
-from reader_json import accounts, setting, rightmenu, city
 import pyautogui
+
+from utils.util_function import default_text
+from utils.constants import *
+
+from reader_json import accounts, setting, rightmenu, city
 
 
 def join_rally() -> None:
@@ -30,17 +34,30 @@ def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['close_btn']["x"], city['blacksmith']['close_btn']["y"], duration=1)
 
 
-def change_city(i:int) -> None:
+def change_city(i:int, f) -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
+    f.write(default_text(name_donate, 'Profile', setting['Profile']["x"], setting['Profile']["y"]))
+
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
+    f.write(default_text(name_donate, 'Setting', setting['Setting']["x"], setting['Setting']['y']))
+
     pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
+    f.write(default_text(name_donate, 'Account', setting['Profile']["x"], setting['Profile']["y"]))
+
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
+    f.write(default_text(name_donate, f'Bot{i}', accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y']))
+
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
+    f.write(default_text(name_donate, 'Loading Screen', accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y']))
+
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
+    f.write(default_text(name_donate, 'Button Yes', setting['Account_changer']['yes_btn_change_acc']['x'],
+                    setting['Account_changer']['yes_btn_change_acc']['y']))
     time.sleep(20)
-    pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
-                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
+    default_text(name_donate, 'Profile', setting['Profile']["x"], setting['Profile']["y"])
+    f.write(pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
+                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=1))
     time.sleep(20)
 
 def change_acct() -> None:
@@ -74,11 +91,14 @@ def get_daily_vip_and_ghs() -> None:
     pyautogui.click(setting["vip_btn"]["gh_chest"]['x'], setting["vip_btn"]["gh_chest"]['y'], duration=2)
     pyautogui.click(setting["vip_btn"]["close_btn_vip"]['x'], setting["vip_btn"]["close_btn_vip"]['y'], duration=2)
 
-def donate_alliance_tech() -> None:
+def donate_alliance_tech(f) -> None:
     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=2)
+    default_text(name_donate, 'Alliance', rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'])
 
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['x'],
                     rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'], duration=4)
+    default_text(name_donate, 'Donate', rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'])
     time.sleep(10)
     try:
         button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\star_technology.png', confidence=0.9)
@@ -87,6 +107,9 @@ def donate_alliance_tech() -> None:
         pyautogui.click(button7location.x, button7location.y + 30, duration=2)
     except Exception as e:
         print(e)
+    default_text(name_donate, 'Technology', rightmenu['Alliance']['Alliance_list']['technology']["donate_btn"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['technology']["donate_btn"]['y'])
+
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['technology']["donate_btn"]['x'],
                     rightmenu['Alliance']['Alliance_list']['technology']["donate_btn"]['y'], clicks=20, duration=10,
                     interval=0.5)

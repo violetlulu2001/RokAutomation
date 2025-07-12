@@ -1,16 +1,24 @@
+import os.path
+
+
 from reader_json import accounts
-from utils.mouse_code import (change_city, get_alliance_rss, get_daily_vip_and_ghs, donate_alliance_tech, find_stone,
-                              start_blacksmith, join_rally)
-from utils.logs_creater import LoggerServer
+from utils.mouse_code import (change_city, get_alliance_rss)
+from utils.os_zone import os_file
+from utils.constants import name_donate, delimtator
+from utils.util_function import get_datetime_format
+
 if __name__ == '__main__':
     count_accounts = accounts["Accounts_count"]["first_acc"]
-    obj_loggin = LoggerServer("Donate_rss.py")
-    for i in range(1, count_accounts+1):
-        obj_loggin.debug_writer(f"Changing account Lulu{i}")
-        change_city(i)
-        obj_loggin.debug_writer(f"Successfully account changed to {i}")
-        obj_loggin.debug_writer(f"Start Donate Tech in Lulu{i}")
+    path_file = os_file.create_folder()
+    path_file: str = os.path.join(path_file, name_donate)
 
-        donate_alliance_tech()
-        obj_loggin.debug_writer(f"Successfully Donate Tech in  Lulu{i}")
-
+    with open(f'{path_file}.txt', 'a') as writer:
+        for i in range(1, count_accounts+1):
+            writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Changed account Lulu{i}\\n')
+            writer.write(delimtator)
+            writer.write("\\n")
+            change_city(i, writer)
+            writer.write(delimtator)
+            writer.write("\\n")
+            writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Donate Alliance Techs Lulu{i}\\n')
+            get_alliance_rss()
