@@ -14,11 +14,9 @@ if __name__ == '__main__':
 
     with open(f'{path_file}.txt', 'a') as writer:
         for i in range(1, count_accounts+1):
-            writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Changed account Lulu{i}\\n')
+            writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Changed account Lulu{i}\n')
             writer.write(delimtator)
-            writer.write("\\n")
             change_city(i, writer)
             writer.write(delimtator)
-            writer.write("\\n")
-            writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Donate Alliance Techs Lulu{i}\\n')
+            writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Donate Alliance Techs Lulu{i}\n')
             get_alliance_rss()
