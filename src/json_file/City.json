@@ -21,6 +21,10 @@
     "get_mats": {
       "x": 690,
       "y": 35
+    },
+    "btn_close_blacksmith": {
+      "x": 50,
+      "y": 50
     }
   },
   "castle": {
