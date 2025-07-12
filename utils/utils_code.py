@@ -28,6 +28,7 @@ def start_blacksmith(mat:str) -> None:
 
 
 def change_city(i:int) -> None:
+    time.sleep(3)
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
     pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
