@@ -1,5 +1,5 @@
 from reader_json import accounts
-from utils.utils_code import (change_city, get_alliance_rss, get_daily_vip_and_ghs, donate_alliance_tech, find_stone,
+from utils.mouse_code import (change_city, get_alliance_rss, get_daily_vip_and_ghs, donate_alliance_tech, find_stone,
                               start_blacksmith, join_rally)
 
 if __name__ == '__main__':
