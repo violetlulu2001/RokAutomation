@@ -5,4 +5,4 @@ def get_datetime_format() -> str:
     return now.strftime("%Y%m%d_%H%M%S%f")
 
 def default_text(name_script:str, name:str , x_coord: str, y_coord: str):
-    return f"[{get_datetime_format().split("_")[-1]}] {name_script}.py | Press {name} on coordinate X:{x_coord}, Y:{y_coord}\\n"
+    return f"[{get_datetime_format().split("_")[-1]}] {name_script}.py | Press {name} on coordinate X:{x_coord}, Y:{y_coord}\n"
