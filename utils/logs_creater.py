@@ -26,3 +26,5 @@ class LoggerServer:
     
     def error_writer(self, text):
         self.logger.error(text)
+
+
