@@ -1,8 +1,7 @@
 import json
 import os
 
-path = os.path.join("RokAutomation", "src", "json_file")
-path = f'D:\\{path}'
+path = os.path.join("D:", "RokAutomation", "src", "json_file")
 
 with open(os.path.join(path, "Accounts.json"), 'r') as account_reader:
     accounts = json.load(account_reader)
