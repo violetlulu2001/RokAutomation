@@ -2,9 +2,9 @@ import time
 
 import discord
 import os
-import random
-from utils.util_function import get_random_fiddle_stick
 
+from utils.util_function import get_random_fiddle_stick
+import sys
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
