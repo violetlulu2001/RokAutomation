@@ -3,9 +3,10 @@ import time
 import discord
 import os
 
-from utils.util_function import get_random_fiddle_stick
 import sys
 sys.path.insert(0, "D:\\RokAutomation\\utils")  # Adjust the path as necessary"
+
+from utils.util_function import get_random_fiddle_stick
 
 class MyClient(discord.Client):
     async def on_ready(self):
