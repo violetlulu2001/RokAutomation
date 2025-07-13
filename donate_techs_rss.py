@@ -12,6 +12,7 @@ if __name__ == '__main__':
     count_accounts = accounts["Accounts_count"]["first_acc"]
     path_file = os_file.create_folder()
     path_file: str = os.path.join(path_file, name_donate)
+    i = 0
     with open(f'{path_file}_{get_datetime_format().split("_")[-1]}.txt', 'a') as writer:
         # for i in range(1, count_accounts+1):
         writer.write(f'[{get_datetime_format().split("_")[-1]}] - {name_donate}.py | Changed account Lulu{i}\n')
