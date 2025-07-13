@@ -8,8 +8,7 @@ class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
         channel = self.get_channel("1393749793591001118")
-        while channel:
-            time.sleep(5)
+        if channel:
             await channel.send(get_random_fiddle_stick())
 
     async def on_message(self, message):
