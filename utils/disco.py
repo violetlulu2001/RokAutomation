@@ -7,7 +7,7 @@ from util_function import get_random_fiddle_stick
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
-        channel = self.get_channel("1393861723647377528")
+        channel = self.get_channel(1393861723647377528)
         if channel:
             await channel.send(get_random_fiddle_stick())
 
