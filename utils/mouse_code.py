@@ -5,7 +5,7 @@ import pyautogui
 from utils.util_function import default_text
 from utils.constants import *
 
-from reader_json import accounts, setting, rightmenu, city
+from utils.reader_json import accounts, setting, rightmenu, city
 
 
 def join_rally() -> None:

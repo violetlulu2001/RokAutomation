@@ -1,4 +1,4 @@
-from reader_json import accounts
+from utils.reader_json import accounts
 from utils.mouse_code import (change_city, get_alliance_rss, get_daily_vip_and_ghs)
 if __name__ == '__main__':
     count_accounts = accounts["Accounts_count"]["first_acc"]

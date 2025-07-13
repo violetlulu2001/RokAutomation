@@ -1,4 +1,4 @@
-from reader_json import accounts
+from utils.reader_json import accounts
 from utils.mouse_code import (change_city,
                               start_blacksmith)
 

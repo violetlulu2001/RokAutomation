@@ -1,7 +1,7 @@
 import os.path
 
 
-from reader_json import accounts
+from utils.reader_json import accounts
 from utils.mouse_code import (change_city, donate_alliance_tech)
 from utils.os_zone import os_file
 from utils.constants import name_donate, delimtator
