@@ -1,22 +1,22 @@
+import time
+
 import discord
 import os
 import random
+from utils.util_function import get_random_fiddle_stick
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
+        channel = self.get_channel("1393749793591001118")
+        while channel:
+            time.sleep(5)
+            await channel.send(get_random_fiddle_stick())
 
     async def on_message(self, message):
         print(f'Message from {message.author}: {message.content}')
         if message.content == '!random_msg':
-            messages = [
-                "Hello there!",
-                "How's everyone doing?",
-                "Have a great day!",
-                "Time for some fun!",
-                "Discord is awesome!"
-            ]
-            await message.channel.send(random.choice(messages))
+
 
 
 
