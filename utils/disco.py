@@ -1,22 +1,35 @@
-import time
 import discord
 import os
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 
-from util_function import get_random_fiddle_stick
+CHANNEL_ID = 1393861723647377528  # Your channel ID
+WATCH_DIR = r'D:\logs\violeta_logs'  # Folder to watch
 
 class MyClient(discord.Client):
     async def on_ready(self):
         print(f'Logged on as {self.user}!')
-        channel = self.get_channel(1393861723647377528)
-        if channel:
-            await channel.send(get_random_fiddle_stick())
+        self.channel = self.get_channel(CHANNEL_ID)
 
-    async def on_message(self, message):
-        print(f'Message from {message.author}: {message.content}')
+class FileCreatedHandler(FileSystemEventHandler):
+    def __init__(self, client):
+        self.client = client
 
+    def on_created(self, event):
+        if not event.is_directory:
+            discord_file = discord.File(event.src_path)
+            coro = self.client.channel.send(file=discord_file)
+            discord.utils.run_coroutine_threadsafe(coro, self.client.loop)
 
 intents = discord.Intents.default()
 intents.message_content = True
-
 client = MyClient(intents=intents)
+
+def start_watcher():
+    event_handler = FileCreatedHandler(client)
+    observer = Observer()
+    observer.schedule(event_handler, WATCH_DIR, recursive=False)
+    observer.start()
+
+start_watcher()
 client.run(os.environ['discorbot'])
