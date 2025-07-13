@@ -15,7 +15,7 @@ class MyClient(discord.Client):
 
     async def on_message(self, message):
         print(f'Message from {message.author}: {message.content}')
-        if message.content == '!random_msg':
+
 
 
 
