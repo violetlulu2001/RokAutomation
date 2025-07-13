@@ -2,7 +2,7 @@ import time
 import discord
 import os
 
-from utils.util_function import get_random_fiddle_stick
+from util_function import get_random_fiddle_stick
 
 class MyClient(discord.Client):
     async def on_ready(self):
