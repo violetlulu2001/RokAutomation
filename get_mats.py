@@ -7,7 +7,7 @@ from utils.constants import name_mat, delimtator
 from utils.util_function import get_datetime_format
 
 
-if __name__ == 'get_mats':
+if __name__ == '__main__':
     count_accounts = accounts["Accounts_count"]["first_acc"]
     path_file = os_file.create_folder()
     path_file: str = os.path.join(path_file, name_mat)
