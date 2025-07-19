@@ -14,7 +14,7 @@ def join_rally() -> None:
     click_image('profile_main.png')
     click_image("join_rally.png")
     click_image("send_troops_rally.png")
-    click_image('march_troops.png')
+    click_image('march_rally.png')
 
 def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
