@@ -32,7 +32,7 @@ def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['close_btn']["x"], city['blacksmith']['close_btn']["y"], duration=1)
 
 
-def change_city(i:int) -> None:
+def change_city(i:int, f) -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
     pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
@@ -41,7 +41,8 @@ def change_city(i:int) -> None:
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
     time.sleep(20)
-    default_text(name_donate, 'Profile', setting['Profile']["x"], setting['Profile']["y"])
+    pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
+                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
     time.sleep(20)
 
 def change_acct() -> None:
