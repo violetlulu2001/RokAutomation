@@ -84,7 +84,7 @@ def donate_alliance_tech() -> None:
         pyautogui.click(button7location.x, button7location.y + 30, duration=2)
     except Exception as e:
         print(e)
-
+    time.sleep(2)
     try:
         button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\technology.png', confidence=0.9)
         button7location = pyautogui.center(button7location)
