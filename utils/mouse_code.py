@@ -32,30 +32,16 @@ def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['close_btn']["x"], city['blacksmith']['close_btn']["y"], duration=1)
 
 
-def change_city(i:int, f) -> None:
+def change_city(i:int) -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
-    f.write(default_text(name_donate, 'Profile', setting['Profile']["x"], setting['Profile']["y"]))
-
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
-    f.write(default_text(name_donate, 'Setting', setting['Setting']["x"], setting['Setting']['y']))
-
     pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
-    f.write(default_text(name_donate, 'Account', setting['Profile']["x"], setting['Profile']["y"]))
-
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
-    f.write(default_text(name_donate, f'Bot{i}', accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y']))
-
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
-    f.write(default_text(name_donate, 'Loading Screen', accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y']))
-
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    f.write(default_text(name_donate, 'Button Yes', setting['Account_changer']['yes_btn_change_acc']['x'],
-                    setting['Account_changer']['yes_btn_change_acc']['y']))
     time.sleep(20)
     default_text(name_donate, 'Profile', setting['Profile']["x"], setting['Profile']["y"])
-    pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
-                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
     time.sleep(20)
 
 def change_acct() -> None:
@@ -89,14 +75,11 @@ def get_daily_vip_and_ghs() -> None:
     pyautogui.click(setting["vip_btn"]["gh_chest"]['x'], setting["vip_btn"]["gh_chest"]['y'], duration=2)
     pyautogui.click(setting["vip_btn"]["close_btn_vip"]['x'], setting["vip_btn"]["close_btn_vip"]['y'], duration=2)
 
-def donate_alliance_tech(f) -> None:
+def donate_alliance_tech() -> None:
     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=2)
-    default_text(name_donate, 'Alliance', rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'])
 
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['x'],
                     rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'], duration=4)
-    default_text(name_donate, 'Donate', rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['x'],
-                    rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'])
     time.sleep(10)
     try:
         button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\star_technology.png', confidence=0.9)
