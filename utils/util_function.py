@@ -12,3 +12,4 @@ def default_text(name_script:str, name:str , x_coord: str, y_coord: str):
 
 def get_random_fiddle_stick():
     return random.choice(fiddle['Fiddlestick'])
+

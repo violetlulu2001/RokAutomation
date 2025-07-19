@@ -5,4 +5,4 @@ def get_coord(x, y):
 
 
 with mouse.Listener(on_move=get_coord) as listen:
-        listen.join()
+    listen.join()
