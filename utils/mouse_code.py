@@ -77,10 +77,21 @@ def get_daily_vip_and_ghs() -> None:
     pyautogui.click(setting["vip_btn"]["close_btn_vip"]['x'], setting["vip_btn"]["close_btn_vip"]['y'], duration=2)
 
 def donate_alliance_tech() -> None:
-    pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=2)
+    try:
+        button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\alliance.png', confidence=0.9)
+        button7location = pyautogui.center(button7location)
+        print(button7location.x, button7location.y)
+        pyautogui.click(button7location.x, button7location.y + 30, duration=2)
+    except Exception as e:
+        print(e)
 
-    pyautogui.click(rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['x'],
-                    rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'], duration=4)
+    try:
+        button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\technology.png', confidence=0.9)
+        button7location = pyautogui.center(button7location)
+        print(button7location.x, button7location.y)
+        pyautogui.click(button7location.x, button7location.y + 30, duration=2)
+    except Exception as e:
+        print(e)
     time.sleep(10)
     try:
         button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\star_technology.png', confidence=0.9)
