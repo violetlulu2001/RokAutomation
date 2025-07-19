@@ -7,5 +7,4 @@ if __name__ == '__main__':
     count_accounts = accounts["Accounts_count"]["first_acc"]
     for i in range(1, count_accounts+1):
         change_city(i)
-        time.sleep(5)
         donate_alliance_tech()
