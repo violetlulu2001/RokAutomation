@@ -126,4 +126,4 @@ def click_image(image_path:str) -> None:
         pyautogui.click(button7location.x, button7location.y, duration=2)
     except Exception as e:
         print(e)
-    time.sleep(3)
+    time.sleep(4)
