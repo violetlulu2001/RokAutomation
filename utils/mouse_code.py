@@ -12,10 +12,9 @@ def join_rally() -> None:
     click_image('alliance.png')
     click_image('war.png')
     click_image('profile_main.png')
-
-    pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=2)
-    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
-    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
+    click_image("join_rally.png")
+    click_image("send_troops_rally.png")
+    click_image('march_troops.png')
 
 def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
