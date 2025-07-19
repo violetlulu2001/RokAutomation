@@ -9,9 +9,9 @@ from utils.reader_json import accounts, setting, rightmenu, city
 
 
 def join_rally() -> None:
-    find_image('alliance.png')
-    find_image('war.png')
-    find_image('profile_main.png')
+    click_image('alliance.png')
+    click_image('war.png')
+    click_image('profile_main.png')
 
     pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=2)
     pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
@@ -119,7 +119,7 @@ def find_stone() -> None:
         except Exception as e:
             print(e)
 
-def find_image(image_path:str) -> None:
+def click_image(image_path:str) -> None:
     try:
         button7location = pyautogui.locateOnScreen(f'D:\\RokAutomation\\src\\image\\{image_path}', confidence=0.9)
         button7location = pyautogui.center(button7location)
