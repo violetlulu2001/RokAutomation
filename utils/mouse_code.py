@@ -18,8 +18,6 @@ def join_rally() -> None:
 
 def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
-    time.sleep(1)
-    pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
     pyautogui.click(city['blacksmith']['craft_mats']['location']["x"], city['blacksmith']['craft_mats']['location']["y"], duration=1)
     pyautogui.click(city['blacksmith']['craft_mats'][mat]["x"], city['blacksmith']['craft_mats'][mat]["y"], clicks=5, duration=4,
                     interval=1)

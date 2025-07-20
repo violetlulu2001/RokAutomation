@@ -1,5 +1,3 @@
-import time
-
 from utils.reader_json import accounts
 from utils.mouse_code import (change_city, donate_alliance_tech, change_acct)
 
