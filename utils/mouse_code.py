@@ -125,3 +125,6 @@ def click_image(image_path:str) -> None:
     except Exception as e:
         print(e)
     time.sleep(4)
+
+def send_slow_build_af():
+    click_image('alliance.png')

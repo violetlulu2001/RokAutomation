@@ -8,8 +8,3 @@ if __name__ == '__main__':
         change_city(i)
         start_blacksmith('bone')
     change_acct()
-    count_accounts = accounts["Accounts_count"]["second_acc"]
-    for i in range(1, count_accounts + 1):
-        change_city(i)
-        start_blacksmith('bone')
-    change_acct()
