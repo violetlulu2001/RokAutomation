@@ -2,7 +2,7 @@ import discord
 import os
 import time
 
-from utils.mouse_code import (change_city, join_rally)
+from mouse_code import (change_city, join_rally)
 
 
 class MyClient(discord.Client):
