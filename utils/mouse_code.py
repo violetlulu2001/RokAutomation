@@ -9,7 +9,7 @@ from utils.reader_json import accounts, setting, rightmenu, city
 
 
 def join_rally() -> None:
-    pyautogui.click(city['castle']['location']['lvl_25']["x"], city['castle']['location']['lvl_25']["y"], duration=2)
+    pyautogui.click(rightmenu['Alliance']['location_btn']["x"], rightmenu['castle']['location']["y"], duration=2)
     pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=2)
     time.sleep(5)
     try:
