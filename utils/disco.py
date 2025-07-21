@@ -10,13 +10,16 @@ class MyClient(discord.Client):
         if message.author == self.user:
             return  # Ignore messages from the bot itself
         if message.content.startswith('!rally'):
-            await message.channel.send('Rally ')
+            await message.channel.send('-------------------------------------------------------------------------------------- ')
             list_acc = [2, 3]
             for i in list_acc:
+                await message.channel.send(f'Change city to LuluBot{i}')
                 change_city(int(i))
                 time.sleep(1)
                 join_rally()
+                await message.channel.send(f'Account LuluBot{i} from matrix joined rally.')
             await message.channel.send('Finish!')
+            await message.channel.send('-------------------------------------------------------------------------------------- ')
 
 
 intents = discord.Intents.default()
