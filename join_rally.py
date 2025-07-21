@@ -1,6 +1,6 @@
 import time
 
-from utils.mouse_code import (change_city, join_rally, change_acct)
+from utils.mouse_code import (change_city, join_rally)
 
 if __name__ == '__main__':
     list_acc = [2, 3]
