@@ -9,12 +9,20 @@ from utils.reader_json import accounts, setting, rightmenu, city
 
 
 def join_rally() -> None:
-    click_image('alliance.png')
-    click_image('war.png')
-    click_image('profile_main.png')
-    click_image("join_rally.png")
-    click_image("send_troops_rally.png")
-    click_image('march_rally.png')
+    pyautogui.click(city['castle']['location']['lvl_25']["x"], city['castle']['location']['lvl_25']["y"], duration=2)
+    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=2)
+    time.sleep(5)
+    try:
+        button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\profile_main.png', confidence=0.9)
+        button7location = pyautogui.center(button7location)
+        pyautogui.click(button7location.x, button7location.y, duration=2)
+    except Exception as e:
+        print(e)
+    pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=2)
+    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
+    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
+
+
 
 def start_blacksmith(mat:str) -> None:
     pyautogui.click(city['blacksmith']['location']["x"], city['blacksmith']['location']["y"], duration=1)
