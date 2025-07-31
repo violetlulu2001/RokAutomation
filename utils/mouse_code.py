@@ -2,7 +2,7 @@ import os
 import time
 import pyautogui
 
-from reader_json import accounts, setting, rightmenu, city
+from utils.reader_json import accounts, setting, rightmenu, city
 
 
 def join_rally() -> None:
@@ -123,7 +123,7 @@ def find_stone() -> None:
 
 def click_image(image_path:str) -> None:
     try:
-        button7location = pyautogui.locateOnScreen(f'D:\\RokAutomation\\src\\image\\{image_path}', confidence=0.9)
+        button7location = pyautogui.locateOnScreen(f'F:\\RokAutomation\\src\\image\\{image_path}', confidence=0.9)
         button7location = pyautogui.center(button7location)
         print(button7location.x, button7location.y)
         pyautogui.click(button7location.x, button7location.y, duration=2)
@@ -132,4 +132,31 @@ def click_image(image_path:str) -> None:
     time.sleep(4)
 
 def send_slow_build_af():
-    click_image('alliance.png')
+    pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
+    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['y'], duration=1)
+    click_image("alliance_fort.png")
+    click_image("join_rally.png")
+    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
+    pyautogui.click(city['castle']['config_1']["x"], city['castle']['config_1']["y"], duration=2)
+
+    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
+
+
+    pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
+    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['y'], duration=1)
+    click_image("alliance_fort.png")
+    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=1)
+    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=1)
+
+
+def send_pit():
+    pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
+    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['x'],
+                    rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['y'], duration=1)
+    click_image("join_rally.png")
+    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
+    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
