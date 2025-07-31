@@ -1,6 +1,6 @@
 from datetime import datetime
 import random
-from utils.reader_json import fiddle
+from reader_json import fiddle
 
 def get_datetime_format() -> str:
     now = datetime.now()
