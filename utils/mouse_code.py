@@ -37,10 +37,10 @@ def change_city(i:int) -> None:
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=2)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=2)
-    time.sleep(10)
+    time.sleep(20)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=2)
-    time.sleep(15)
+    time.sleep(20)
 
 def change_acct() -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
