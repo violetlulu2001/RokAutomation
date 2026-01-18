@@ -23,7 +23,7 @@ class MyClient(discord.Client):
         if message.content.startswith('!rally_main'):
             await message.channel.send(
                 '-------------------------------------------------------------------------------------- ')
-            list_acc = [3, 4]
+            list_acc = [1, 2, 3, 4, 5]
             for i in list_acc:
                 await message.channel.send(f'Change city to LuluBot{i}')
                 change_city(int(i))
