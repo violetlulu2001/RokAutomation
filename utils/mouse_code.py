@@ -7,7 +7,7 @@ from reader_json import accounts, setting, rightmenu, city
 
 def join_rally() -> None:
     pyautogui.click(rightmenu['Alliance']['location_btn']["x"], rightmenu['Alliance']['location_btn']["y"], duration=5)
-    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=2)
+    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=5)
     time.sleep(3)
     try:
         button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\profile_main.png', confidence=0.9)
