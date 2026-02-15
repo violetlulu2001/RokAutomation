@@ -6,18 +6,13 @@ from utils.reader_json import accounts, setting, rightmenu, city, slow
 
 
 def join_rally() -> None:
-    pyautogui.click(rightmenu['Alliance']['location_btn']["x"], rightmenu['Alliance']['location_btn']["y"], duration=4)
-    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=4)
-    time.sleep(3)
-    try:
-        button7location = pyautogui.locateOnScreen('D:\\RokAutomation\\src\\image\\profile_main.png', confidence=0.9)
-        button7location = pyautogui.center(button7location)
-        pyautogui.click(button7location.x, button7location.y, duration=5)
-    except Exception as e:
-        print(e)
-    pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=4)
-    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=4)
-    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=4)
+    pyautogui.click(rightmenu['Alliance']['location_btn']["x"], rightmenu['Alliance']['location_btn']["y"], duration=2)
+    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=2)
+    pyautogui.click(city['castle']['settigs_castle']["x"], city['castle']['settigs_castle']["y"], duration=2)
+    pyautogui.click(city['castle']['closet_btn_castle']["x"], city['castle']['closet_btn_castle']["y"], duration=2)
+    pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=2)
+    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
+    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
 
 
 
@@ -31,21 +26,26 @@ def start_blacksmith(mat:str) -> None:
 
 def change_city(i:int) -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
+    time.sleep(1)
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
+    time.sleep(1)
     pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
+    time.sleep(1)
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
+    time.sleep(1)
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
+    time.sleep(1)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
     time.sleep(10)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    time.sleep(10)
+    time.sleep(15)
 
 def change_acct() -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
-    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
+    pyautogui.dclick(setting['Account']['x'], setting['Account']['y'], duration=1)
     pyautogui.click(setting["Account_changer"]['location_btn']['x'], setting['Account_changer']['location_btn']['y'], duration=1)
     time.sleep(8)
     pyautogui.click(setting["Account_changer"]["switch_account"]['x'], setting["Account_changer"]['switch_account']['y'], duration=1)

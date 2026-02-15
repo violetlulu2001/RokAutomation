@@ -34,7 +34,7 @@
     },
     "join_rally": {
       "x": 1215,
-      "y": 395
+      "y": 457
     },
     "config_1": {
       "x": 1440,
@@ -47,6 +47,14 @@
     "march_troops": {
       "x": 1250,
       "y": 825
+    },
+    "settigs_castle" :{
+      "x": 622,
+      "y": 277
+    },
+    "closet_btn_castle": {
+      "x": 615,
+      "y": 360
     }
   }
 }
