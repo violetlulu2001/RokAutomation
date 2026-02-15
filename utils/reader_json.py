@@ -17,4 +17,6 @@ with open(os.path.join(path, "City.json"), 'r') as account_reader:
 with open(os.path.join(path, "FiddleStick.json"), 'r') as account_reader:
     fiddle = json.load(account_reader)
 
+with open(os.path.join(path, "slow_build.json"), 'r') as account_reader:
+    slow = json.load(account_reader)
 

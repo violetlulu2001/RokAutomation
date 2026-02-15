@@ -2,7 +2,7 @@ import os
 import time
 import pyautogui
 
-from reader_json import accounts, setting, rightmenu, city
+from utils.reader_json import accounts, setting, rightmenu, city, slow
 
 
 def join_rally() -> None:
@@ -30,17 +30,17 @@ def start_blacksmith(mat:str) -> None:
 
 
 def change_city(i:int) -> None:
-    pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=4)
-    pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=4)
-    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=4)
-    pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=4)
-    pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=4)
+    pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
+    pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
+    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
+    pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
+    pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
-                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=4)
-    time.sleep(20)
+                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
+    time.sleep(10)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
-                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=4)
-    time.sleep(20)
+                    setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
+    time.sleep(10)
 
 def change_acct() -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
@@ -135,18 +135,12 @@ def send_slow_build_af():
     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['x'],
                     rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['y'], duration=1)
-    click_image("alliance_fort.png")
-    click_image("join_rally.png")
+    pyautogui.click(slow['SlowBuild']['join_slow_duild']['x'],
+                    slow['SlowBuild']['join_slow_duild']['y'], duration=1)
     pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
-    pyautogui.click(city['castle']['config_1']["x"], city['castle']['config_1']["y"], duration=2)
-
+    pyautogui.click(slow['SlowBuild']['set1']['x'],
+                    slow['SlowBuild']['set1']['y'], duration=1)
     pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
-
-
-    pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
-    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['x'],
-                    rightmenu['Alliance']['Alliance_list']['territory']["location_btn"]['y'], duration=1)
-    click_image("alliance_fort.png")
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
                     rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=1)
     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
