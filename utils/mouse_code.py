@@ -2,7 +2,7 @@ import os
 import time
 import pyautogui
 
-from utils.reader_json import accounts, setting, rightmenu, city, slow
+from reader_json import accounts, setting, rightmenu, city, slow
 
 
 def join_rally() -> None:
