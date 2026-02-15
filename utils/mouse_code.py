@@ -45,7 +45,7 @@ def change_city(i:int) -> None:
 def change_acct() -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
     pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
-    pyautogui.dclick(setting['Account']['x'], setting['Account']['y'], duration=1)
+    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
     pyautogui.click(setting["Account_changer"]['location_btn']['x'], setting['Account_changer']['location_btn']['y'], duration=1)
     time.sleep(8)
     pyautogui.click(setting["Account_changer"]["switch_account"]['x'], setting["Account_changer"]['switch_account']['y'], duration=1)
