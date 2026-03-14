@@ -13,8 +13,9 @@ class MyClient(discord.Client):
             await message.channel.send('-------------------------------------------------------------------------------------- ')
             list_acc = [1, 2, 3, 4, 5]
             for i in list_acc:
+                time.sleep(5)
                 change_city(i)
-                time.sleep(10)
+                time.sleep(5)
                 await message.channel.send(f'Change city to LuluBot{i}')
                 join_rally()
             await message.channel.send(f'Account LuluBot{i} from matrix joined rally.')
