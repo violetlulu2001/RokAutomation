@@ -21,20 +21,6 @@ class MyClient(discord.Client):
             await message.channel.send('Finish!')
             await message.channel.send('-------------------------------------------------------------------------------------- ')
 
-        if message.content.startswith('second'):
-            await message.channel.send(
-                '-------------------------------------------------------------------------------------- ')
-            list_acc = [1]
-            for i in list_acc:
-                change_city(i)
-                time.sleep(5)
-                await message.channel.send(f'Change city to LuluBot{i}')
-                join_rally()
-            await message.channel.send(f'Account LuluBot{i} from matrix joined rally.')
-            await message.channel.send('Finish!')
-            await message.channel.send(
-                '-------------------------------------------------------------------------------------- ')
-
         if message.content.startswith("slowbuild"):
             await message.channel.send('-------------------------------------------------------------------------------------- ')
             list_acc = [1, 2, 3, 4, 5, 6, 7, 8]

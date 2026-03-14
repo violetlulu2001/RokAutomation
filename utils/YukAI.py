@@ -14,7 +14,7 @@ class MyClient(discord.Client):
             list_acc = [1, 2, 3, 4, 5]
             for i in list_acc:
                 change_city(i)
-                time.sleep(5)
+                time.sleep(10)
                 await message.channel.send(f'Change city to LuluBot{i}')
                 join_rally()
             await message.channel.send(f'Account LuluBot{i} from matrix joined rally.')
@@ -24,10 +24,10 @@ class MyClient(discord.Client):
 
         if message.content.startswith("slowbuild"):
             await message.channel.send('-------------------------------------------------------------------------------------- ')
-            list_acc = [1, 2, 3, 4, 5, ]
+            list_acc = [1, 2, 3, 4, 5]
             for i in list_acc:
                 change_city(i)
-                time.sleep(5)
+                time.sleep(10)
                 send_slow_build_af()
             await message.channel.send('-------------------------------------------------------------------------------------- ')
 

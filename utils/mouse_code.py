@@ -25,22 +25,22 @@ def start_blacksmith(mat:str) -> None:
 
 
 def change_city(i:int) -> None:
-    pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
-    time.sleep(1)
-    pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=1)
-    time.sleep(1)
-    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=1)
-    time.sleep(1)
+    pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=2)
+    time.sleep(4)
+    pyautogui.click(setting['Setting']["x"], setting['Setting']['y'], duration=2)
+    time.sleep(4)
+    pyautogui.click(setting['Account']['x'], setting['Account']['y'], duration=2)
+    time.sleep(4)
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
-    time.sleep(1)
+    time.sleep(4)
     pyautogui.click(accounts[f'Bot{i}']['x'], accounts[f'Bot{i}']['y'], duration=1)
-    time.sleep(1)
+    time.sleep(4)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    time.sleep(15)
+    time.sleep(20)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    time.sleep(15)
+    time.sleep(20)
 
 # def donate_tech() -> None:
 #     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
