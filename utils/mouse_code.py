@@ -6,13 +6,20 @@ from reader_json import accounts, setting, rightmenu, city, slow
 
 
 def join_rally() -> None:
-    pyautogui.click(rightmenu['Alliance']['location_btn']["x"], rightmenu['Alliance']['location_btn']["y"], duration=4)
-    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=4)
-    pyautogui.click(city['castle']['settigs_castle']["x"], city['castle']['settigs_castle']["y"], duration=4)
-    pyautogui.click(city['castle']['closet_btn_castle']["x"], city['castle']['closet_btn_castle']["y"], duration=4)
-    pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=4)
-    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=4)
-    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=4)
+    time.sleep(2)
+    pyautogui.click(rightmenu['Alliance']['location_btn']["x"], rightmenu['Alliance']['location_btn']["y"], duration=2)
+    time.sleep(2)
+    pyautogui.click(city['castle']['rally_btn']["x"], city['castle']['rally_btn']["y"], duration=2)
+    time.sleep(2)
+    pyautogui.click(city['castle']['settigs_castle']["x"], city['castle']['settigs_castle']["y"], duration=2)
+    time.sleep(2)
+    pyautogui.click(city['castle']['closet_btn_castle']["x"], city['castle']['closet_btn_castle']["y"], duration=2)
+    time.sleep(2)
+    pyautogui.click(city['castle']['join_rally']["x"], city['castle']['join_rally']["y"], duration=2)
+    time.sleep(2)
+    pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
+    time.sleep(2)
+    pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
 
 
 
