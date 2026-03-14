@@ -46,5 +46,17 @@
          "x": 1430,
          "y": 250
       }
+   },
+   "close_account": {
+        "x": 160,
+        "y": 1000
+   },
+   "confirm_close_account": {
+        "x": 800,
+        "y": 675
+   },
+   "start_btn": {
+        "x": 1460,
+        "y": 750
    }
 }

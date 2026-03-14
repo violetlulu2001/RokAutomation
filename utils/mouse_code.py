@@ -37,10 +37,24 @@ def change_city(i:int) -> None:
     time.sleep(1)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
-    time.sleep(10)
+    time.sleep(15)
     pyautogui.click(setting['Account_changer']['yes_btn_change_acc']['x'],
                     setting['Account_changer']['yes_btn_change_acc']['y'], duration=1)
     time.sleep(15)
+
+# def donate_tech() -> None:
+#     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
+#     pyautogui.click(rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['x'],
+#                     rightmenu['Alliance']['Alliance_list']['technology']["location_btn"]['y'], duration=1)
+#     pyautogui.click(rightmenu['Alliance']['Alliance_list']['technology']["donate_btn"]['x'],
+#                     rightmenu['Alliance']['Alliance_list']['technology']["donate_btn"]['y'], clicks=20, duration=10,
+#                     interval=0.5)
+#     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
+#                     rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=2)
+#     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
+#                     rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=2)
+#     pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
+#                     rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=2)
 
 def change_acct() -> None:
     pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
@@ -52,6 +66,10 @@ def change_acct() -> None:
     time.sleep(8)
     pyautogui.click(setting["Account_changer"]["switch_btn_account"]['x'], setting["Account_changer"]['switch_btn_account']['y'], duration=1)
     time.sleep(8)
+    pyautogui.click(setting["Account_changer"]["yes_btn_change_acc"]['x'], setting["Account_changer"]['yes_btn_change_acc']['y'], duration=1)
+    time.sleep(10)
+    pyautogui.click(setting["Account_changer"]["yes_btn_change_acc"]['x'], setting["Account_changer"]['yes_btn_change_acc']['y'], duration=1)
+    time.sleep(10)
     pyautogui.click(setting["Account_changer"]["yes_btn_change_acc"]['x'], setting["Account_changer"]['yes_btn_change_acc']['y'], duration=1)
 
 def get_alliance_rss() -> None:
@@ -141,11 +159,6 @@ def send_slow_build_af():
     pyautogui.click(slow['SlowBuild']['set1']['x'],
                     slow['SlowBuild']['set1']['y'], duration=1)
     pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
-    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
-                    rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=1)
-    pyautogui.click(rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['x'],
-                    rightmenu['Alliance']['Alliance_list']['territory']["close_teritory"]['y'], duration=1)
-
 
 def send_pit():
     pyautogui.click(rightmenu['Alliance']["location_btn"]['x'], rightmenu['Alliance']["location_btn"]['y'], duration=1)
@@ -154,3 +167,16 @@ def send_pit():
     click_image("join_rally.png")
     pyautogui.click(city['castle']['new_troops']["x"], city['castle']['new_troops']["y"], duration=2)
     pyautogui.click(city['castle']['march_troops']["x"], city['castle']['march_troops']["y"], duration=2)
+
+def close_game() -> None:
+    pyautogui.click(setting['Profile']["x"], setting['Profile']["y"], duration=1)
+    time.sleep(2)
+    pyautogui.click(setting['close_account']["x"], setting['close_account']["y"], duration=1)
+    time.sleep(2)
+    pyautogui.click(setting['confirm_close_account']["x"], setting['confirm_close_account']["y"], duration=1)
+
+def open_game() -> None:
+    pyautogui.click(setting['start_btn']["x"], setting['start_btn']["y"], duration=1)
+    time.sleep(20)
+    pyautogui.click(setting['start_btn']["x"], setting['start_btn']["y"], duration=1)
+
